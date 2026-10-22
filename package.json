@@ -1,0 +1,19 @@
+{
+  "name": "tide-vault",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Kho lưu bí mật mã hóa bằng TideCloak",
+  "engines": { "node": ">=18.17.0" },
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:api": "npm run dev -w apps/api",
+    "dev:web": "npm run dev -w apps/web",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}
